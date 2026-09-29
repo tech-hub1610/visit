@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: lottery-sambad-portal
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: LOTTERY_SAMBAD_API_KEY
+        sync: false
